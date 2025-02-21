@@ -152,59 +152,88 @@
 //}
 
 //EXERCISE:2.2:B:
-#include <iostream>
-#include <cctype>
-#include "stack.h"
+//#include <iostream>
+//#include <cctype>
+//#include "stack.h"
+//
+//using namespace std;
+//
+//int precedence(char op) {
+//    if (op == '+' || op == '-') return 1;
+//    if (op == '*' || op == '/') return 2;
+//    return 0;
+//}
+//
+//string InfixToPostfix(const string& infix) {
+//    Stack s;
+//    string postfix = "";
+//
+//    for (char ch : infix) {
+//        if (isalnum(ch)) {
+//            postfix += ch;
+//        }
+//        else if (ch == '(') {
+//            s.Push(ch);
+//        }
+//        else if (ch == ')') {
+//            while (!s.IsEmpty()) {
+//                char top;
+//                s.Pop(top);
+//                if (top == '(') break;
+//                postfix += top;
+//            }
+//        }
+//        else {
+//            while (!s.IsEmpty()) {
+//                char top;
+//                s.Peek();
+//                if (precedence(top) >= precedence(ch)) {
+//                    s.Pop(top);
+//                    postfix += top;
+//                }
+//                else {
+//                    break;
+//                }
+//            }
+//            s.Push(ch);
+//        }
+//    }
+//
+//    while (!s.IsEmpty()) {
+//        char top;
+//        s.Pop(top);
+//        postfix += top;
+//    }
+//
+//    return postfix;
+//}
 
-using namespace std;
-
-int precedence(char op) {
-    if (op == '+' || op == '-') return 1;
-    if (op == '*' || op == '/') return 2;
-    return 0;
-}
-
-string InfixToPostfix(const string& infix) {
-    Stack s;
-    string postfix = "";
-
-    for (char ch : infix) {
-        if (isalnum(ch)) {
-            postfix += ch;
-        }
-        else if (ch == '(') {
-            s.Push(ch);
-        }
-        else if (ch == ')') {
-            while (!s.IsEmpty()) {
-                char top;
-                s.Pop(top);
-                if (top == '(') break;
-                postfix += top;
-            }
-        }
-        else {
-            while (!s.IsEmpty()) {
-                char top;
-                s.Peek();
-                if (precedence(top) >= precedence(ch)) {
-                    s.Pop(top);
-                    postfix += top;
-                }
-                else {
-                    break;
-                }
-            }
-            s.Push(ch);
-        }
-    }
-
-    while (!s.IsEmpty()) {
-        char top;
-        s.Pop(top);
-        postfix += top;
-    }
-
-    return postfix;
-}
-
+//EXERCISE:2.2:C:
+//#include <iostream>
+//#include <cctype>
+//#include "stack.h"
+//
+//using namespace std;
+//
+//int EvaluatePostfix(const string& postfix) {
+//    Stack s;
+//    for (char ch : postfix) {
+//        if (isdigit(ch)) {
+//            s.Push(ch - '0');
+//        }
+//        else {
+//            int val1, val2;
+//            s.Pop(val2);
+//            s.Pop(val1);
+//            switch (ch) {
+//            case '+': s.Push(val1 + val2); break;
+//            case '-': s.Push(val1 - val2); break;
+//            case '*': s.Push(val1 * val2); break;
+//            case '/': s.Push(val1 / val2); break;
+//            }
+//        }
+//    }
+//    int result;
+//    s.Pop(result);
+//    return result;
+//}
