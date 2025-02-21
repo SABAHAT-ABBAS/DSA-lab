@@ -82,3 +82,21 @@
 //}
 
 //EXERCISE:2.2:B:
+//int main() {
+//    string infix;
+//    cout << "Enter an infix expression: ";
+//    cin >> infix;
+//
+//    cout << "Postfix Expression: " << InfixToPostfix(infix) << endl;
+//    return 0;
+//}
+
+//EXERCISE:2.2:C:
+//int main() {
+//    string postfix;
+//    cout << "Enter a postfix expression: ";
+//    cin >> postfix;
+//
+//    cout << "Result: " << EvaluatePostfix(postfix) << endl;
+//    return 0;
+//}
