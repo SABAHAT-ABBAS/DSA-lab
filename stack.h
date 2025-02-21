@@ -38,7 +38,7 @@
 //};
 
 
-//EXERCISE:2.1:
+//EXERCISE:2.1;A:
 //#include <iostream>
 //using namespace std;
 //
@@ -58,3 +58,30 @@
 //    int top;
 //    ItemType items[MAX_ITEMS];
 //};
+
+//EXERCISE:2.1:B:
+//#include <iostream>
+//#include "stack.h"  // Include the stack header file
+//
+//using namespace std;
+//
+//// Function to reverse a string using Stack
+//string ReverseString(const string& input) {
+//    Stack s;  // Create a stack object
+//
+//    // Push all characters onto the stack
+//    for (char ch : input) {
+//        s.Push(ch);
+//    }
+//
+//    string reversed = "";
+//
+//    // Pop characters from stack to get reversed order
+//    while (!s.IsEmpty()) {
+//        reversed += s.Peek();  // Get the top character
+//        ItemType temp;
+//        s.Pop(temp);  // Remove the character from stack
+//    }
+//
+//    return reversed;
+//}
